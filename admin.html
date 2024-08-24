@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACEAAAAiCAYAAADRcLDBAAAEs2lUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4KPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iWE1QIENvcmUgNS41LjAiPgogPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4KICA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIgogICAgeG1sbnM6ZXhpZj0iaHR0cDovL25zLmFkb2JlLmNvbS9leGlmLzEuMC8iCiAgICB4bWxuczp0aWZmPSJodHRwOi8vbnMuYWRvYmUuY29tL3RpZmYvMS4wLyIKICAgIHhtbG5zOnBob3Rvc2hvcD0iaHR0cDovL25zLmFkb2JlLmNvbS9waG90b3Nob3AvMS4wLyIKICAgIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIKICAgIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIgogICAgeG1sbnM6c3RFdnQ9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZUV2ZW50IyIKICAgZXhpZjpQaXhlbFhEaW1lbnNpb249IjMzIgogICBleGlmOlBpeGVsWURpbWVuc2lvbj0iMzQiCiAgIGV4aWY6Q29sb3JTcGFjZT0iMSIKICAgdGlmZjpJbWFnZVdpZHRoPSIzMyIKICAgdGlmZjpJbWFnZUxlbmd0aD0iMzQiCiAgIHRpZmY6UmVzb2x1dGlvblVuaXQ9IjIiCiAgIHRpZmY6WFJlc29sdXRpb249Ijk2LjAiCiAgIHRpZmY6WVJlc29sdXRpb249Ijk2LjAiCiAgIHBob3Rvc2hvcDpDb2xvck1vZGU9IjMiCiAgIHBob3Rvc2hvcDpJQ0NQcm9maWxlPSJzUkdCIElFQzYxOTY2LTIuMSIKICAgeG1wOk1vZGlmeURhdGU9IjIwMjItMDMtMzFUMTA6NTA6MjMrMDI6MDAiCiAgIHhtcDpNZXRhZGF0YURhdGU9IjIwMjItMDMtMzFUMTA6NTA6MjMrMDI6MDAiPgogICA8eG1wTU06SGlzdG9yeT4KICAgIDxyZGY6U2VxPgogICAgIDxyZGY6bGkKICAgICAgc3RFdnQ6YWN0aW9uPSJwcm9kdWNlZCIKICAgICAgc3RFdnQ6c29mdHdhcmVBZ2VudD0iQWZmaW5pdHkgRGVzaWduZXIgMS4xMC4xIgogICAgICBzdEV2dDp3aGVuPSIyMDIyLTAzLTMxVDEwOjUwOjIzKzAyOjAwIi8+CiAgICA8L3JkZjpTZXE+CiAgIDwveG1wTU06SGlzdG9yeT4KICA8L3JkZjpEZXNjcmlwdGlvbj4KIDwvcmRmOlJERj4KPC94OnhtcG1ldGE+Cjw/eHBhY2tldCBlbmQ9InIiPz5V57uAAAABgmlDQ1BzUkdCIElFQzYxOTY2LTIuMQAAKJF1kc8rRFEUxz9maORHo1hYKC9hISNGTWwsRn4VFmOUX5uZZ36oeTOv954kW2WrKLHxa8FfwFZZK0WkZClrYoOe87ypmWTO7dzzud97z+nec8ETzaiaWd4NWtYyIiNhZWZ2TvE946WZSjqoj6mmPjE1HKWkfdxR5sSbgFOr9Ll/rXoxYapQVik8oOqGJTwqPL5i6Q5vCzeo6dii8KlwpyEXFL519LjLLw6nXP5y2IhGBsFTJ6ykijhexGra0ITl5bRqmWU1fx/nJTWJ7PSUxBbxJkwijBBGYYwhBgnRQ7/MIQIE6ZIVJfK7f/MnyUmuKrPOKgZLpEhj0SnqslRPSEyKnpCRYdXp/9++msneoFu9JgwVT7b91ga+LfjetO3PQ9v+PgLvI1xkC/m5A+h7F32zoLXug38dzi4LWnwHzjeg8UGPGbFfySvuSSbh9QRqZ6H+Gqrm3Z7l9zm+h+iafNUV7O5Bu5z3L/wAdthn7QIme0YAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAJTSURBVFiF7Zi9axRBGIefEw2IdxFBRQsLWUTBaywSK4ubdSGVIY1Y6HZql8ZKCGIqwX/AYLmCgVQKfiDn7jZeEQMWfsSAHAiKqPiB5mIgELWYOW5vzc3O7niHhT/YZvY37/swM/vOzJbIqVq9uQ04CYwCI8AhYAlYAB4Dc7HnrOSJWcoJcBS4ARzQ2F4BZ2LPmTeNuykHwEWgkQGAet9QfiMZjUSt3hwD7psGTWgs9pwH1hC1enMYeA7sKwDxBqjGnvNdZzKZjqmCAKh+U1kmEwi3IEBbIsugnY5avTkEtIAtFhBrQCX2nLVehqyRqFoCAAwBh3WGLAhbgCRIYYinwLolwLqKUwwi9pxV4KUlxKKKUwxC6ZElRCPLYAJxGfhSEOCz6m8HEXvOB2CyIMSk6m8HoXQTmMkJcA2YNTHm3congOvATo3tE3A29pxbpnFzQSiQPcB55IFmFNgFfEQeahaAGZMpsIJIAZWAHcDX2HN+2cT6r39GxmvC9aPNwH5gO1BOPFuBVWAZue0vA9+A12EgjPadnhCuH1WAE8ivYAQ4ohKaagV4gvxi5oG7YSA2vApsCOH60WngKrA3R9IsvQUuhIGY00K4flQG7gHH/mLytB4C42EgfrQb0mV7us8AAMeBS8mGNMR4nwHamtBB7B4QRNdaS0M8GxDEog7iyoAguvJ0QYSBuAOcAt71Kfl7wA8DcTvZ2KtOlJEr+ByyQtqqhTyHTIeB+ONeqi3brh+VgIN0fohUgWGggizZFTplu12yW8iy/YLOGWMpDMTPXnl+Az9vj2HERYqPAAAAAElFTkSuQmCC" type="image/png">
+    
+  <link rel="stylesheet" href="./assets/compiled/css/app.css">
+  <link rel="stylesheet" href="./assets/compiled/css/app-dark.css">
+</head>
+<body>
+    <script src="assets/static/js/initTheme.js"></script>
+    <section class="main">
+        <nav>
+            <span class="logo">SS</span>
+            <ul>
+                <a href="admin.html" class="active_nav_item">
+                    <li>
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_65_164)">
+                                <path d="M38.535 15.115L25.8934 2.47169C24.3288 0.91167 22.2095 0.0356445 20 0.0356445C17.7906 0.0356445 15.6713 0.91167 14.1067 2.47169L1.46502 15.115C0.999062 15.578 0.629637 16.1289 0.378158 16.7357C0.126679 17.3425 -0.00185067 17.9932 2.01325e-05 18.65V35.0117C2.01325e-05 36.3378 0.526804 37.6095 1.46449 38.5472C2.40217 39.4849 3.67394 40.0117 5.00002 40.0117H35C36.3261 40.0117 37.5979 39.4849 38.5356 38.5472C39.4732 37.6095 40 36.3378 40 35.0117V18.65C40.0019 17.9932 39.8734 17.3425 39.6219 16.7357C39.3704 16.1289 39.001 15.578 38.535 15.115ZM25 36.6784H15V30.1217C15 28.7956 15.5268 27.5238 16.4645 26.5862C17.4022 25.6485 18.6739 25.1217 20 25.1217C21.3261 25.1217 22.5979 25.6485 23.5356 26.5862C24.4732 27.5238 25 28.7956 25 30.1217V36.6784ZM36.6667 35.0117C36.6667 35.4537 36.4911 35.8776 36.1785 36.1902C35.866 36.5028 35.442 36.6784 35 36.6784H28.3334V30.1217C28.3334 27.9116 27.4554 25.7919 25.8926 24.2291C24.3298 22.6663 22.2102 21.7884 20 21.7884C17.7899 21.7884 15.6703 22.6663 14.1075 24.2291C12.5447 25.7919 11.6667 27.9116 11.6667 30.1217V36.6784H5.00002C4.55799 36.6784 4.13407 36.5028 3.82151 36.1902C3.50895 35.8776 3.33335 35.4537 3.33335 35.0117V18.65C3.3349 18.2083 3.51034 17.785 3.82169 17.4717L16.4634 4.83335C17.4029 3.89824 18.6745 3.37326 20 3.37326C21.3256 3.37326 22.5972 3.89824 23.5367 4.83335L36.1784 17.4767C36.4885 17.7888 36.6638 18.2101 36.6667 18.65V35.0117Z" fill="white"/>
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_65_164">
+                                    <rect width="40" height="40" fill="white"/>
+                                </clipPath>
+                            </defs>
+                        </svg>                            
+                    </li>
+                </a>
+                <a href="admin_students.html">
+                    <li>
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_102_59)">
+                                <path d="M36.6733 7.49665C36.675 6.05498 35.7983 4.81332 34.44 4.33332L23.665 0.531648C21.3516 -0.286685 18.805 -0.288352 16.4933 0.521648L5.5883 4.33832C4.22497 4.81498 3.34497 6.05498 3.34497 7.49832C3.34497 8.94332 4.22664 10.1833 5.58997 10.6583L9.99997 12.1966V15C9.99997 20.515 14.485 25 20 25C25.515 25 30 20.515 30 15V12.1966L33.3333 11.0333V18.3316C33.3333 19.2516 34.08 19.9983 35 19.9983C35.92 19.9983 36.6666 19.2516 36.6666 18.3316V7.53665C36.6666 7.52165 36.6733 7.51165 36.6733 7.49665ZM26.6666 15C26.6666 18.6766 23.6766 21.6666 20 21.6666C16.3233 21.6666 13.3333 18.6766 13.3333 15V13.36L16.435 14.4416C17.5833 14.8416 18.7916 15.0433 19.9983 15.0433C21.205 15.0433 22.4116 14.8416 23.56 14.4416L26.6666 13.3583V14.9983V15ZM22.4633 11.295C20.875 11.85 19.1233 11.85 17.535 11.295L6.68997 7.48332L17.5966 3.66665C18.3933 3.38832 19.2283 3.24832 20.0666 3.24832C20.91 3.24832 21.7533 3.38998 22.5566 3.67332L33.3316 7.50332L22.4633 11.295ZM33.26 37.8383C33.5333 38.7166 33.0416 39.6516 32.1633 39.925C31.9983 39.9766 31.8316 40 31.6683 40C30.9583 40 30.3 39.5416 30.0766 38.8266C28.765 34.61 24.6233 31.665 20.0016 31.665C15.38 31.665 11.2383 34.61 9.92664 38.8266C9.6533 39.7066 8.7133 40.195 7.83997 39.9233C6.96164 39.65 6.46997 38.715 6.7433 37.8366C8.4833 32.24 13.935 28.3316 20.0016 28.3316C26.0683 28.3316 31.52 32.2416 33.26 37.8383Z" fill="white"/>
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_102_59">
+                                    <rect width="40" height="40" fill="white"/>
+                                </clipPath>
+                            </defs>
+                        </svg>                            
+                    </li>
+                </a>
+                <a href="admin_reports.html">
+                    <li>
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_65_174)">
+                                <path d="M40 13.4195C40 9.46118 36.715 0.0861816 31.5367 0.0861816C26.4333 0.0861816 23.3333 9.34785 23.3333 13.4195C23.3333 17.4428 26.2017 20.8095 30 21.5845V38.4195C30 39.3395 30.745 40.0862 31.6667 40.0862C32.5883 40.0862 33.3333 39.3395 33.3333 38.4195V21.5845C37.1317 20.8095 40 17.4445 40 13.4195ZM31.6667 18.4195C28.91 18.4195 26.6667 16.1762 26.6667 13.4195C26.6667 9.79951 29.4817 3.41951 31.5367 3.41951C33.6517 3.41951 36.6667 9.88785 36.6667 13.4195C36.6667 16.1762 34.4233 18.4195 31.6667 18.4195ZM16.6667 11.7528C17.5867 11.7528 18.3333 12.4995 18.3333 13.4195V20.0862C18.3333 20.5278 18.1583 20.9528 17.845 21.2645L14.5117 24.5978C14.1867 24.9228 13.76 25.0862 13.3333 25.0862C12.9067 25.0862 12.48 24.9228 12.155 24.5978C11.5033 23.9462 11.5033 22.8928 12.155 22.2412L15 19.3962V13.4195C15 12.4995 15.7467 11.7528 16.6667 11.7528ZM26.385 31.6328C26.8983 32.3978 26.6933 33.4328 25.9283 33.9462C23.185 35.7828 19.9833 36.7545 16.6667 36.7545C7.47667 36.7528 0 29.2762 0 20.0862C0 10.8962 7.47667 3.41951 16.6667 3.41951C17.9167 3.41951 19.1617 3.55785 20.3683 3.83285C21.2667 4.03618 21.8283 4.92951 21.625 5.82618C21.42 6.72451 20.5267 7.29118 19.6317 7.08285C18.665 6.86451 17.6683 6.75285 16.6667 6.75285C9.315 6.75285 3.33333 12.7345 3.33333 20.0862C3.33333 27.4378 9.315 33.4195 16.6667 33.4195C19.32 33.4195 21.88 32.6428 24.0717 31.1745C24.8333 30.6628 25.87 30.8678 26.385 31.6328Z" fill="white"/>
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_65_174">
+                                    <rect width="40" height="40" fill="white"/>
+                                </clipPath>
+                            </defs>
+                        </svg>                            
+                    </li>
+                </a>
+            </ul>
+        </nav>
+        <div class="general">
+            <div class="filters_line">
+                <div class="header_admin">
+                    <span class="title">Главная страница</span>
+                </div>
+            </div>
+            <div class="cards">
+                
+                <div class="card stat">
+                    <span class="card_title">Статистика</span>
+                    <div class="left_stat">
+                        <div class="progress_circle clip-svg">
+                            <div class="progress__content">0%</div>
+                            <svg width="160" height="160">
+                          <defs>
+                            <linearGradient id="gradient"
+                             x1="0%" y1="0%" x2="100%" y2="0%">
+                             <stop stop-color="#FA545B" offset="0"/>
+                             <stop stop-color="#F29F3C" offset="1"/>
+                            </linearGradient>
+                           </defs>
+                           <ellipse rx="55" ry="55" cx="60" cy="60" stroke="#2A333F" fill="none" stroke-width="10"></ellipse>
+                              <g>
+                              <path id="path" stroke-width="10" stroke="url(#gradient)" fill="none" d="">
+                              </path>
+                              </g>
+                            </svg>
+                        </div>
+                        <div class="rigth_stat">
+                            <span class="stat_title">Количество вошедших учеников</span>
+                            <div class="info_stat">
+                                <span class="enter_people">123</span>
+                                <img src="img/triangle_down.svg" alt="">
+                                <span class="enter_procent">43,2%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="card about">
+                    <div class="about_info">
+                        <span class="school_name">Школа-гимназия №22</span>
+                        <div class="dir"><span class="school_title">Директор:</span> <span class="dir_name">Сапаров Арслан Хамитович</span></div>
+                        <div class="tel"><span class="school_title">Телефон:</span> <span class="tel_number">+7 (7172) 16-22-32</span></div>
+                        <div class="adr"><span class="school_title">Адрес</span> <span class="adr_location">Абылай хана 19/2</span></div>
+                    </div>
+                    <div class="school_img"></div>
+                </div>
+                <div class="card hbday">
+                    <div class="student_bday">
+                        <div class="photo_student"></div>
+                        <div class="student_inf">
+                            <span class="card_title">Поздравляем с днём рождения!</span>
+                            <div class="student_name">Саттарханов Олжас Кабиденович</div>
+                            <div class="student_class">5 Б класс</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+    <section class="section diagram">
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <!-- <div class="card-header">
+                        <h4>Radial Gradient Chart</h4>
+                    </div> -->
+                    <div class="card-body">
+                        <div id="candle"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+            
+        </div>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="assets/static/js/components/dark.js"></script>
+    <script src="assets/extensions/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    
+    
+    <script src="assets/compiled/js/app.js"></script>
+    
+
+    
+<script src="assets/extensions/dayjs/dayjs.min.js"></script>
+<script src="assets/extensions/apexcharts/apexcharts.min.js"></script>
+<!-- <script src="assets/static/js/pages/ui-apexchart.js"></script> -->
+<script src="js/adminDiagram.js"></script>
+</body>
+</html>
