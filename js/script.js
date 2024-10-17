@@ -112,3 +112,8 @@ function selectDate() {
   var date = document.getElementById("calendar").value;
   document.querySelector(".dropbtn2").textContent = date;
 }
+const marquee = document.querySelector('.bday_names span');
+        const marqueeWidth = marquee.scrollWidth;
+        const duration = marqueeWidth / 100; // Adjust the divisor to control speed
+
+        marquee.style.animationDuration = `${duration}s`;

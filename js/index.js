@@ -30,58 +30,45 @@ var d = new Date();
 var n = d.getDay();
 $('.week').text(days[n]);
         $.ajax({
-            url: 'get_data.php', // Путь к PHP-файлу, который возвращает JSON данные
+            url: 'get_index.php', // Путь к PHP-файлу, который возвращает JSON данные
             method: 'GET',
             dataType: 'json',
             success: function(data) {
-                // Обновление статистики
-                animate(kid, data.stats.today_percentage);
-                kid=Math.floor(data.stats.today_percentage);
                 
-                $('.enter_people').text(data.stats.today_count);
-                $('.enter_procent').text(Math.floor(data.stats.today_percentage) + '%');
 
                 // Обновление данных о школе
                 $('.school_name').text(data.school_info.name);
                 $('.dir_name').text(data.school_info.director);
                 $('.tel_number').text(data.school_info.phone);
                 $('.adr_location').text(data.school_info.address);
-                $('.school_img').css('background-image', 'url(' + data.school_info.photo + ')');
 
-                // Очистка таблицы перед обновлением данных
-                $('.right_content').empty();
 
-                // Заполнение таблицы данными о посещениях
-                data.visits.forEach(function(visit, index) {
-                    var rowClass = (index % 2 === 0) ? 'dark' : 'light';
-                    var row = '<div class="table_line ' + rowClass + '">' +
-                        '<span class="t_1 table_fio_value">' + visit.last_name + ' ' + visit.name + '</span>' +
-                        '<span class="t_2 table_class_value">' + visit.dept_name + '</span>' +
-                        '<span class="t_3 table_time_value">' + visit.event_time + '</span>' +
-                        '</div>';
-                    $('.right_content').append(row);
-                });
+
 
                 // Обновление поздравлений с днем рождения
-                const today = new Date();
-                let birthdayFound = false;
+const today = new Date();
+let birthdayFound = false;
+$('.bday_list').empty();  // Очищаем предыдущие данные
 
-                data.persons.forEach(function(person) {
-                    const birthday = new Date(person.birthday);
-                    if (birthday.getDate() === today.getDate() && birthday.getMonth() === today.getMonth()) {
-                        $('.student_name').text(person.last_name + ' ' + person.name);
-                        $('.student_class').text(person.dept_name);
-                        $('.photo_student').css('background-image', 'url(img/student_photo.png)');
-                        birthdayFound = true;
-                    }
-                });
+data.persons.forEach(function(person) {
+    const birthday = new Date(person.birthday);
+    if (birthday.getDate() === today.getDate() && birthday.getMonth() === today.getMonth()) {
+        // Добавляем каждого именинника в список
+        const nameElement = $('<span>').text(person.last_name + ' ' + person.name + ' ' + person.class + ' класс');
+        const separator = $('<hr>').addClass('names_seperation');
 
-                if (!birthdayFound) {
-                    // Если именинников нет, выводим сообщение "Удачного дня!"
-                    $('.student_name').text('Удачного дня!');
-                    $('.student_class').text('');
-                    $('.photo_student').css('background-image', 'none');
-                }
+        // Вставляем элементы в блок
+        $('.bday_list').append(nameElement, separator);
+        birthdayFound = true;
+    }
+});
+
+if (!birthdayFound) {
+    // Если именинников нет, выводим сообщение "Удачного дня!"
+    const noBirthdayMessage = $('<span>').text('Удачного дня!');
+    $('.bday_list').append(noBirthdayMessage);
+}
+
             },
             error: function(jqXHR, textStatus, errorThrown) {
                 console.error('Ошибка при загрузке данных: ' + textStatus, errorThrown);

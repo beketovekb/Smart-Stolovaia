@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-storage.js"></script>
+    <script>
+        // Инициализация Firebase
+const firebaseConfig = {
+  apiKey: "AIzaSyDY9z2I9ZOaWTixbBXpL_GKFEH58s_Xr8k",
+  authDomain: "powertech-e316a.firebaseapp.com",
+  databaseURL: "https://powertech-e316a-default-rtdb.firebaseio.com",
+  projectId: "powertech-e316a",
+  storageBucket: "powertech-e316a.appspot.com",
+  messagingSenderId: "509372888318",
+  appId: "1:509372888318:web:d480a797ebf514a37861af",
+  measurementId: "G-61121VVN0V"
+};
+
+// Инициализация Firebase
+firebase.initializeApp(firebaseConfig);
+
+// Получение ссылки на базу данных
+const database = firebase.database();
+
+// Функция для удаления данных из ветки 'historyDevice'
+function removeHistoryDeviceData() {
+  const historyDeviceRef = database.ref('historyDevice');
+
+  // Удаляем все данные из 'historyDevice'
+  historyDeviceRef.remove()
+    .then(() => {
+      console.log('Данные из ветки historyDevice были успешно удалены.');
+    })
+    .catch((error) => {
+      console.error('Ошибка при удалении данных:', error);
+    });
+}
+
+// Вызов функции для удаления данных
+removeHistoryDeviceData();
+
+    </script>
+</body>
+</html>
